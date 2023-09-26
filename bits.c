@@ -343,7 +343,22 @@ unsigned float_i2f(int x) {
  *   Rating: 4
  */
 int float64_f2i(unsigned uf1, unsigned uf2) {
-  return 2;
+  int exp=((uf2&(0x7ff00000))>>20);
+  int sig=uf2&(0x80000000);
+  int ans=0x40000000|((uf1&0xffc00000)>>22)|((uf2&0xfffff)<<10);
+  int offset=1053-exp;
+  if(exp>1053){
+    return 0x80000000;
+  }
+  else if(exp<1023){
+    return 0;
+  }else{
+    ans=ans>>offset;
+    if(sig){
+      ans=-ans;
+    }
+  }
+  return ans;
 }
 /* 
  * float_negpwr2 - Return bit-level equivalent of the expression 2.0^-x
