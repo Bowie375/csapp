@@ -287,7 +287,14 @@ int isGreater(int x, int y) {
  *   Rating: 3
  */
 int subOK(int x, int y) {
-  return 2;
+  int mask=(1<<31);
+  int sig_x=(mask&x),sig_y=(mask&y);
+  int minus=x+((~y)+1);
+  int sig_m=(mask&minus);
+  int ans=0;
+
+  ans=(sig_x^sig_y)&(sig_x^sig_m);
+  return (!ans);
 }
 /*
  * trueFiveEighths - multiplies by 5/8 rounding toward 0,
@@ -301,7 +308,16 @@ int subOK(int x, int y) {
  */
 int trueFiveEighths(int x)
 {
-    return 2;
+  int y=x&0x7;
+  
+  x=x>>3;
+  x=(x<<2)+x;
+  y=(y<<2)+y;
+  y=((x>>31)&0x7)+y;
+  y=(y>>3);
+  x=x+y;
+
+  return x;
 }
 /* 
  * float_half - Return bit-level equivalent of expression 0.5*f for
