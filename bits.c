@@ -269,7 +269,11 @@ int sameSign(int x, int y) {
  *  Rating: 3
  */
 int satMul3(int x) {
-    return 2;
+  int mask=(1<<31);
+  int mid=(x<<1),ans=mid+x;
+  int sig_x=(mask&x),sig_m=(mask&mid),sig_a=(mask&ans);
+  int flag=((sig_x^sig_m)|(sig_x^sig_a))>>31;
+  return (flag&(mask+(~(!sig_x)+1)))|((~flag)&ans);
 }
 /* 
  * isGreater - if x > y  then return 1, else return 0 

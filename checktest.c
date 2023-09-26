@@ -31,27 +31,23 @@ float fix_nan(float f)
     return f;
 }
 
-int isGreater(int x, int y) {
-  int mask=(1<<31);
-  int minus=y+((~x)+1);
-  int sig_m=mask&minus;
-
-  return !(!sig_m);
+unsigned float_i2f(int x) {
+  return 2;
 }
 
 
-int test_isGreater(int x, int y)
-{
-  return x > y;
+unsigned test_float_i2f(int x) {
+  float f = (float) x;
+  return f2u(f);
 }
 
 
 int main()
 {
-    int val1 = isGreater(-134217728, 2080374784);
-    int val2 = test_isGreater(-134217728, 2080374784);
-    printf("isGreater(-134217728, 2080374784) --> %d [0x%x]\n", val1, val1);
-    printf("test_isGreater(-134217728, 2080374784) --> %d [0x%x]\n", val2, val2);
+    int val1 = float_i2f(0);
+    int val2 = test_float_i2f(0);
+    printf("float_i2f(0) --> %d [0x%x]\n", val1, val1);
+    printf("test_float_i2f(0) --> %d [0x%x]\n", val2, val2);
     if (val1 == val2) {
 	printf(".. False negative\n");
     } else
