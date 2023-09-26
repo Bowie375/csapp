@@ -276,7 +276,11 @@ int satMul3(int x) {
  *   Rating: 3
  */
 int isGreater(int x, int y) {
-  return 2;
+  int mask=(1<<31);
+  int minus=y+((~x)+1);
+  int sig_m=mask&minus,sig_x=(mask&x),sig_y=(mask&y);
+  int flag=((sig_x^sig_y)>>31);
+  return ((flag)&(!(sig_x)))|((~flag)&(!(!sig_m)));
 }
 /* 
  * subOK - Determine if can compute x-y without overflow
