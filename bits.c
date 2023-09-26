@@ -252,7 +252,10 @@ int counter1To5(int x) {
  *   Rating: 2
  */
 int sameSign(int x, int y) {
-  return 2;
+  int mask=(1<<31);
+  int sig_x=(mask&x),sig_y=(mask&y);
+
+  return !(sig_x^sig_y);
 }
 /*
  * satMul3 - multiplies by 3, saturating to Tmin or Tmax if overflow
