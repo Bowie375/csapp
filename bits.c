@@ -315,6 +315,25 @@ int trueFiveEighths(int x)
  *   Rating: 4
  */
 unsigned float_half(unsigned uf) {
+  int exp=(uf&0x7f800000);
+  int sig=(uf&0x80000000);
+  int mag=(uf&0x7fffff);
+  if(exp==0x7f800000){
+    return uf;
+  }else if(exp==0x800000&&((uf&0x7fffff)==0x7fffff)){
+    return sig|0x800000;
+  }else if(exp&&(exp^0x800000)){
+    return uf-0x800000;
+  }else{
+    mag=mag|exp;
+    if((mag&0x1)&&(mag&0x2)){
+      mag=mag+1;
+      return sig|((mag>>1)&0x7fffff);
+    }
+    else{
+      return sig|(mag>>1);
+    }
+  }
   return 2;
 }
 /* 
