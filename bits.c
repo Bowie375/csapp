@@ -196,7 +196,11 @@ int bitConditional(int x, int y, int z) {
  *  Rating: 2
  */
 int byteSwap(int x, int n, int m) {
-    return 2;
+    int offset1=(n<<3),offset2=(m<<3);
+    int mask1=0xff<<offset1,mask2=0xff<<offset2,mask=(mask1|mask2);
+    int bytes=x&mask;
+    int sklt=x&(~(mask));
+    return ((bytes>>offset1<<offset2)&mask2)|((bytes>>offset2<<offset1)&mask1)|sklt;
 }
 /* 
  * logicalShift - shift x to the right by n, using a logical shift
@@ -207,7 +211,10 @@ int byteSwap(int x, int n, int m) {
  *   Rating: 3
  */
 int logicalShift(int x, int n) {
-  return 2;
+  int mask=(1<<31);
+  int highestBit=!(!(mask&x));
+  x=x&(~mask);
+  return (x>>n)|(highestBit<<(32+(~n)));
 }
 /* 
  * cleanConsecutive1 - change any consecutive 1 to zeros in the binary form of x.
