@@ -31,23 +31,30 @@ float fix_nan(float f)
     return f;
 }
 
-unsigned float_i2f(int x) {
+int leftBitCount(int x) {
   return 2;
 }
 
 
-unsigned test_float_i2f(int x) {
-  float f = (float) x;
-  return f2u(f);
+int test_leftBitCount(int x) {
+  int result = 0;
+  int i;
+  for (i = 31; i >= 0; i--) {
+      int bit = (x >> i) & 0x1;
+      if (!bit)
+   break;
+      result ++;
+  }
+  return result;
 }
 
 
 int main()
 {
-    int val1 = float_i2f(0);
-    int val2 = test_float_i2f(0);
-    printf("float_i2f(0) --> %d [0x%x]\n", val1, val1);
-    printf("test_float_i2f(0) --> %d [0x%x]\n", val2, val2);
+    int val1 = leftBitCount(-536870912);
+    int val2 = test_leftBitCount(-536870912);
+    printf("leftBitCount(-536870912) --> %d [0x%x]\n", val1, val1);
+    printf("test_leftBitCount(-536870912) --> %d [0x%x]\n", val2, val2);
     if (val1 == val2) {
 	printf(".. False negative\n");
     } else

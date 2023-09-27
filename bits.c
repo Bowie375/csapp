@@ -174,7 +174,8 @@ NOTES:
  *   Rating: 1
  */
 int bitXnor(int x, int y) {
-  return 2;
+
+  return (~(x|y))|(~((~x)|(~y)));
 }
 /* 
  * bitConditional - x ? y : z for each bit respectively
@@ -184,7 +185,7 @@ int bitXnor(int x, int y) {
  *   Rating: 1
  */
 int bitConditional(int x, int y, int z) {
-  return 2;
+  return (x&y)|((~x)&z);
 }
 /* 
  * byteSwap - swaps the nth byte and the mth byte
