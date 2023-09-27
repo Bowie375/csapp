@@ -242,7 +242,9 @@ int leftBitCount(int x) {
  *   Rating: 2
  */
 int counter1To5(int x) {
-  return 2;
+  int mask=!((!(x&1))|(!(x&4)));
+  mask=(mask<<3)+((~mask)+1);
+  return (mask&1)|((~mask)&(x+1));
 }
 /* 
  * sameSign - return 1 if x and y have same sign, and 0 otherwise
