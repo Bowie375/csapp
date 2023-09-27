@@ -383,7 +383,45 @@ unsigned float_half(unsigned uf) {
  *   Rating: 4
  */
 unsigned float_i2f(int x) {
-  return 2;
+  int sig=0,exp=0,mag=0;
+  unsigned int cnt=0xffffffff,x_=0;
+  int flag=0,tmp=0,tail=0,lastBit=0,offset=0;
+  sig=0x80000000&x;
+  if(!x){
+    return 0;
+  }
+  if(sig){
+    x=-x;
+  }
+  x_=x;
+  while(x_){
+    cnt=cnt+1;
+    x_=(x_>>1);
+  }
+  offset=(1<<cnt);
+  exp=((127+cnt)<<23);
+  mag=(x&((offset-1)));
+  if(cnt<24){
+    mag=mag<<(23-cnt);
+  }
+  else{
+    tmp=cnt-23;
+    lastBit=(1<<tmp);
+    flag=lastBit>>1;
+    tail=(flag-1)&mag;
+    flag=flag&mag;
+    if(flag){
+      if((tail)||((lastBit&mag))){
+        mag=mag+lastBit;
+        if(mag&(offset)){
+          exp=exp+0x800000;
+        }
+      }
+    }
+    mag=(mag>>tmp)&0x7fffff;
+  }
+
+  return sig|exp|mag;
 }
 /* 
  * float64_f2i - Return bit-level equivalent of expression (int) f
