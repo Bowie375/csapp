@@ -218,6 +218,7 @@ int logicalShift(int x, int n) {
   return (x>>n)|(highestBit<<(32+(~n)));
 }
 /* 
+
  * cleanConsecutive1 - change any consecutive 1 to zeros in the binary form of x.
  *   Consecutive 1 means a set of 1 that contains more than one 1.
  *   Examples cleanConsecutive1(0x10) = 0x10
@@ -229,7 +230,12 @@ int logicalShift(int x, int n) {
  *   Rating: 4
  */
 int cleanConsecutive1(int x){
-    return 2;
+  int mask=(1<<31);
+  int _x=x&(~mask);
+  int highestBit=mask&x;
+  int slx=(_x>>1)|((!(!highestBit))<<30);
+
+  return (x^((x<<1)|slx))&x;
 }
 /*
  * leftBitCount - returns count of number of consective 1's in
