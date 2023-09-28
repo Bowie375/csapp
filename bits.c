@@ -246,7 +246,29 @@ int cleanConsecutive1(int x){
  *   Rating: 4
  */
 int leftBitCount(int x) {
-  return 2;
+  int a1,a2,a3,a4,a5;
+  int mask=0xff,flag=0;
+
+  mask=(mask<<8)|mask;
+  x=(~x);
+  flag=(~(!x))+1;
+
+  a1=(!!((x>>16)&mask))<<4;
+  x=(x>>a1)&mask;
+
+  a2=(!!(x>>8))<<3;
+  x=(x>>a2);
+
+  a3=(!!(x>>4))<<2;
+  x=(x>>a3);
+
+  a4=(!!(x>>2))<<1;
+  x=(x>>a4);
+
+  a5=((x>>1));
+  a1=a1+a2+a3+a4+a5;
+
+  return ((~flag)&(32+(~a1)))|((flag)&32);
 }
 /* 
  * counter1To5 - return 1 + x if x < 5, return 1 otherwise, we ensure that 1<=x<=5
