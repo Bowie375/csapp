@@ -72,24 +72,28 @@ Example usages:
 ### 3. Files:
 * Makefile	- Compiles btest, fshow, and ishow
 * README		- This file
-
+<br>
 * bits.c		- The file you will be modifying and handing in
 * bits.h		- Header file
-
+<br>
 * bddcheck/	- Directory containing the BDD checker
-
+<br>
 * btest.c		- The main btest program
 * btest.h	- Used to build btest
 * decl.c	- Used to build btest
 * tests.c       - Used to build btest
 * tests-header.c- Used to build btest
-
+<br>
 * dlc*		- Rule checking compiler binary (data lab compiler)	 
-
+<br>
 * driver.pl*	- Driver program that uses the bdd checker and dlc to autograde bits.c
   * Driverhdrs.pm - Driver config file
   * Driverlib.pm	- Driver library file
-
+<br>
 * fshow.c		- Helper for examining floating-point representations
 * ishow.c		- Helper for examining integer representations
 
+### 4.some words to say
+* First, this whole Project comes from [==PKU==](https://www.pku.edu.cn), be sure to contact the relavent party if you need to fork this repository.
+* Second, the only purpose I created this repository is to markdown my progress in finishing these labs. But I'll be happy if you can get some useful ideas from my works here.
+* Just a reminder, maybe you will think of making such a repository while you are doing your works too, if you don't want to see ALL your works GONE silently just after having a sound sleep. Trust me \^_^ .
