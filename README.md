@@ -74,22 +74,17 @@ Example usages:
 * README		- This file
 <br/>
 * bits.c		- The file you will be modifying and handing in
-* bits.h		- Header file
-<br/>
-* bddcheck/	- Directory containing the BDD checker
-<br/>
+* bits.h		- Header file<br/><br/>
+* bddcheck/	- Directory containing the BDD checker<br/><br/>
 * btest.c		- The main btest program
 * btest.h	- Used to build btest
 * decl.c	- Used to build btest
 * tests.c       - Used to build btest
-* tests-header.c- Used to build btest
-<br/>
-* dlc*		- Rule checking compiler binary (data lab compiler)	 
-<br/>
+* tests-header.c- Used to build btest<br/><br/>
+* dlc*		- Rule checking compiler binary (data lab compiler)	 <br/><br/>
 * driver.pl*	- Driver program that uses the bdd checker and dlc to autograde bits.c
   * Driverhdrs.pm - Driver config file
-  * Driverlib.pm	- Driver library file
-<br/>
+  * Driverlib.pm	- Driver library file<br/><br/>
 * fshow.c		- Helper for examining floating-point representations
 * ishow.c		- Helper for examining integer representations
 
