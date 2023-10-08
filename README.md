@@ -71,8 +71,7 @@ Example usages:
 
 ### 3. Files:
 * Makefile	- Compiles btest, fshow, and ishow
-* README		- This file
-<br/>
+* README		- This file<br/><br/>
 * bits.c		- The file you will be modifying and handing in
 * bits.h		- Header file<br/><br/>
 * bddcheck/	- Directory containing the BDD checker<br/><br/>
