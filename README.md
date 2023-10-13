@@ -30,8 +30,8 @@ This file contains materials for one instance of the attacklab.
     Attack codes in assembly languege which you need to insert in some phases.
 
 ## About basic instructions
-* instruction to survive
-go find and click the _attacklab.pdf_ ,then read it over and over again.\^_^
+* instruction to survive <br/>
+find and click  _attacklab.pdf_ , the handout, then read it over and over again.\^_^
 * untar the bag
 > \> $  tar -xvf target208.tar
 * examine your answers
