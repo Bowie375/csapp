@@ -40,17 +40,17 @@ go find and click the _attacklab.pdf_ ,then read it over and over again.\^_^
 note: _exploit_string.txt_ contains **your** answer string, and you can apply this to _./rtarget_ and _./starget_ as well.
 
 * get the assembler code
-> \> \$ objdump -d ./*target
+> \> \$ objdump -d ./*target <br/>
 \> \$ objdump -d -j .rodata ./*target
 
 note: the first instruction lets you get the executable part of the program, while the second one gives you the _.rodata_ section. You can apply this to other sections, such as _.data_ too.
 
 * run gdb to debug (important and necessary)
-> \> $ ./hex2raw < exploit_string.txt > exploit_out.txt
-\> \$  gdb -q ./*target
-\> \$ breakpoint [function_name]
-\> \$ run < exploit_out.txt
-\> \$ print \$rax
+> \> $ ./hex2raw < exploit_string.txt > exploit_out.txt<br/>
+\> \$  gdb -q ./*target <br/>
+\> \$ breakpoint [function_name] <br/>
+\> \$ run < exploit_out.txt <br/>
+\> \$ print \$rax <br/>
 \> \$ x /20xb [address in memory]
 
 note: these are the basic instructions to use gdb, see [this webpage](https://zhuanlan.zhihu.com/p/196763202) for more details. 
