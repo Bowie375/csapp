@@ -1,34 +1,3 @@
-<script>
-let change = (function(){
-    let cnt = 0;
-    return function _change() {
-        try {
-            const x = document.getElementById("trick");
-            if (x === null) {
-                throw ("not found");
-            }
-            switch (cnt++) {
-                case 0:
-                    x.innerHTML = "Are you sure to give up now?";
-                    x.style.color="red";
-                    break;
-                case 1:
-                    x.innerHTML = "Try to use the instruction \'lea (%rdi,%rsi,1),%rax\'";
-                    x.style.color="black";
-                    break;
-                default:
-                    break;
-            }
-
-        } catch(err) {
-            alert("the function is " + err);
-            return;
-        }
-    }
-})()
-
-</script>
-
 # Attack lab 
 ---
 This file contains materials for one instance of the attacklab.
@@ -87,7 +56,7 @@ note: the first instruction lets you get the executable part of the program, whi
 note: these are the basic instructions to use gdb, see [this webpage](https://zhuanlan.zhihu.com/p/196763202) for more details. 
 
 ## About a trick
-<button type="button" style="font-size:20px" onclick="fun()" id="trick"> Want to know the answer to phase 5? Click Me.</button>
+Want to know the answer to phase 5? Try to use the gadget _lea (%rdi,%rsi,1),%rax_.
 
 ## some word to say
 
