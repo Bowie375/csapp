@@ -8,11 +8,13 @@
 This directory contains the files that you need for the __CS:APP architecture lab__.
 
 ## Files:
-* __archlab.pdf:__ $~~~$ Lab writeup
-* __Makefile:__		$~~~~~~~~$Use this to handin your solutions
-* __README:__ $~~~~~~~$This file
-* __sim.tar:__	$~~~~~~~~~~~$Archive of the Y86-64 tools in tar format
-* __simguide.pdf:__	$~$CS:APP Guide to Simulators document
+<table>
+<tr><td> archlab.pdf </td> <td> Lab writeup</td></tr>
+<tr><td> Makefile</td><td>Use this to handin your solutions</td></tr>
+<tr><td> README</td> <td>This file</td></tr>
+<tr><td> sim.tar	</td> <td>Archive of the Y86-64 tools in tar format</td></tr>
+<tr><td> simguide.pdf</td> <td><b>CS:APP</b> Guide to Simulators document</td></tr>
+</table>
 
 ## some word to say
 * My opinion of this lab: 
