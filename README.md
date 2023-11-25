@@ -11,7 +11,7 @@
 ## Tricky points
 * you may be stuck in trace31.txt, this is because trace31.txt don't and __'\n'__ in the lastline !
 
-  Try to avoid it? You can modify trace31.txt itself, of course, but you can also try to do something with _main_ function. See how _builtin_ attribute of each command line are determined will help you.<br/><br/>
+  Try to avoid it? You can modify trace31.txt itself, of course, but you can also try to do something with _main_ function. See how _builtin_ attribute of each command line are determined will help you.
 
 * Make sure you know how to use _waitpid_.
 
