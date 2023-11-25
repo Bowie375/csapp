@@ -19,8 +19,8 @@ This directory contains the files that you need for the __CS:APP architecture la
 ## some word to say
 * My opinion of this lab: 
 It's possibly the most difficult one of the first four labs. It's strenuous and tricky to achive full marks, even high marks will rack your brain, actually.
-But anyway, it belongs to ICS, so I won't suggest you to cherish much hope for breezing through the lab during your lunch.
-* I have left each part of the lab a README to offer some guidance. You will find them in your working directory while you walk through each section.
-* MAKE SURE you have read __archlab.pdf__ for at least once before starting coding.
-* I have to claim something here: there are lots of incredibly unbelievable answer programs on github, and on the web. Most of them behave much much better than what I provided here, which is 7.47/7.5 for PartC. If you have problem figuring it out but mine answer just won't satisfy your appetite, make the best of your searching tools.\^_^
+But anyway, it belongs to ICS, so I won't suggest you to cherish much hope for breezing through the lab during your lunch.<br/><br/>
+* I have left each part of the lab a README to offer some guidance. You will find them in your working directory while you walk through each section.<br/><br/>
+* MAKE SURE you have read __archlab.pdf__ for at least once before starting coding.<br/><br/>
+* I have to claim something here: there are lots of incredibly unbelievable answer programs on github, and on the web. Most of them behave much much better than what I provided here, which is 7.47/7.5 for PartC. If you have problem figuring it out but mine answer just won't satisfy your appetite, make the best of your searching tools.\^_^<br/><br/>
 * Again, _enjoy yourself and have fun_      
