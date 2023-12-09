@@ -1,19 +1,19 @@
 # Malloclab
 ---
-### Files
-* _malloclab-answers.tar_
+## Files
+* _malloclab-answers.tar_<br/>
     This tarball contains my own answers for this lab.<br/><br/>
 
-* _malloclab-handout.tar_
+* _malloclab-handout.tar_<br/>
     This tarball is the original handout bag, download it and start building your allocator.<br/><br/>
 
-* _malloclab.pdf_
+* _malloclab.pdf_<br/>
     The guidance file, make sure you have read it through before coding.<br/><br/>
 
-* _README.md_
+* _README.md_<br/>
     This file.
 
-### Tricky points
+## Tricky points
 * Try diffrent combination of method, that is:
     * how should we manage empty list ?
         * implicit-list
@@ -31,7 +31,7 @@
 
 * there is nothing special in this lab, I think, it's only laborious.<br/><br/>
 
-### Some words to say
+## Some words to say
 This lab is torturous, I promise to you. I have spent days debugging, digging traces of those annoying mistakes from myriads of outputs. Even more, I have to optimize my vulnerable code over and over again to get full mark :).<br/><br/>
 
 But it's a really strong sense of fulfillment when you actually make it. So I encourage everyone interested to have a try. Your skill will be greatly tested and improved during the experience.
