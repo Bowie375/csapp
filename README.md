@@ -23,7 +23,7 @@
 ## some words to say
     This lab is not so difficult as previous ones, but you still need to 
     be patient in debugging and tackling with confusing errors caused by
-    network configurations.<br/><br/>
+    network configurations.
    
     ICS will come to end, but happiness in coding would never recede.
-    So Again, enjoy yourself and have fun_\^_^
+    So Again, enjoy yourself and have fun ^_^
