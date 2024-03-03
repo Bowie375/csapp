@@ -1,7 +1,7 @@
 # csapp
 ---
 ## what is this lab used for ?
-I created this repository while I was finishing labs for class CS : APP. It's basically a record of my learning experience.
+I created this repository while I was finishing labs for class ICS. It's basically a record of my learning experience.
 ## how can I use it ?
 Every branch of this repository is a seperate lab, and I have included my own answer there. You can fork anyone of them to get started.
 ## can I fork these labs for other use ?
